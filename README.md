@@ -13,14 +13,18 @@ You will need to edit some variables in the code for the program to work.
 
 First you need to know the corresponding file descriptor for your mouse.
 You can find it by running:
-```$ ls -l /dev/input/by-id/```
+```
+$ ls -l /dev/input/by-id/
+```
 It will show something like this:
-> lrwxrwxrwx 1 root root usb-some-microfone -> ../event3  
+<pre>
+lrwxrwxrwx 1 root root usb-some-microfone -> ../event3  
 lrwxrwxrwx 1 root root usb-some-mouse-event-mouse -> ../event4  
 lrwxrwxrwx 1 root root usb-some-keyboard-event-kbd -> ../event5
+</pre>
 
 In this case the mouse events will be at event4, so the corresponding descriptor will be:
-> /dev/input/event4
+<pre>/dev/input/event4</pre>
 
 Change the variable MOUSE_PATH in the code to your mouse file descriptor.
 ## Changing the mouse sensitivity:
@@ -31,13 +35,19 @@ Additionally you can change the mouse sensitivity by altering the variable MOUSE
 Make sure you have a C compiler in your system, it can be gcc or clang.
 
 After changing the variables of the program, compile it by running:
-```$ gcc src/joymouse.c -lX11 -lXi -lXfixes -lev -o joymouse```
+```
+$ gcc src/joymouse.c -lX11 -lXi -lXfixes -lev -o joymouse
+```
 
 ## Running
 Give execute permission to the binary:
-```$ chmod +x joymouse```
+```
+$ chmod +x joymouse
+```
 Execute the binary with root permissions:
-```$ sudo ./joymouse```
+```
+$ sudo ./joymouse
+```
 
 # Dependencies
 X11 libraries: libX11, libXi, libXfixes
