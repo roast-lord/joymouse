@@ -15,8 +15,8 @@ First you need to know the corresponding file descriptor for your mouse.
 You can find it by running:
 ```$ ls -l /dev/input/by-id/```
 It will show something like this:
-> lrwxrwxrwx 1 root root usb-some-microfone -> ../event3
-lrwxrwxrwx 1 root root usb-some-mouse-event-mouse -> ../event4
+> lrwxrwxrwx 1 root root usb-some-microfone -> ../event3  
+lrwxrwxrwx 1 root root usb-some-mouse-event-mouse -> ../event4  
 lrwxrwxrwx 1 root root usb-some-keyboard-event-kbd -> ../event5
 
 In this case the mouse events will be at event4, so the corresponding descriptor will be:
