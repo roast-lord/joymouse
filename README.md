@@ -8,7 +8,7 @@ JoyMouse is a simple program that creates a virtual gamepad and maps the mouse m
 
 # Usage
 
-## Finding your mouse file descriptor:
+### Finding your mouse file descriptor:
 You will need to edit some variables in the code for the program to work.
 
 First you need to know the corresponding file descriptor for your mouse.
@@ -27,11 +27,11 @@ In this case the mouse events will be at event4, so the corresponding descriptor
 <pre>/dev/input/event4</pre>
 
 Change the variable MOUSE_PATH in the code to your mouse file descriptor.
-## Changing the mouse sensitivity:
+### Changing the mouse sensitivity:
 Additionally you can change the mouse sensitivity by altering the variable MOUSE_SENSITIVITY to your desired value.
 
 
-## Compiling
+### Compiling
 Make sure you have a C compiler in your system, it can be gcc or clang.
 
 After changing the variables of the program, compile it by running:
@@ -39,7 +39,7 @@ After changing the variables of the program, compile it by running:
 $ gcc src/joymouse.c -lX11 -lXi -lXfixes -lev -o joymouse
 ```
 
-## Running
+### Running
 Give execute permission to the binary:
 ```
 $ chmod +x joymouse
