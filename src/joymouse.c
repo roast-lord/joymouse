@@ -17,8 +17,8 @@
 #include <X11/extensions/XInput2.h>
 #include <X11/extensions/Xfixes.h>
 
+// Your mouse path
 char MOUSE_PATH[] = "/dev/input/event4";
-
 const int MOUSE_SENSITIVITY = 1600;
 
 int sz = 0;
