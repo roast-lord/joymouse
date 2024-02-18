@@ -1,0 +1,1 @@
+clang src/joymouse.c -lX11 -lXi -lXfixes -lev -o "joymouse"
